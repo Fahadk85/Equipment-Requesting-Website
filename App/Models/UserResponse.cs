@@ -8,6 +8,8 @@ namespace App.Models
 {
     public class UserResponse
     {
+        public int Id {get; set;} //Adding the ID property
+
         [Required]
         public string Name {get; set;}
 
@@ -30,6 +32,17 @@ namespace App.Models
 
         [Required]
         public int Duration {get; set;}
+
+        public UserResponse()
+        {
+            Id = GenerateUniqueId(); // Updating the constructor to set the Id property 
+        }
         
+        public int _currentId = 1;
+
+        public int GenerateUniqueId()
+        {
+            return _currentId++;
+        }
     }
 }
