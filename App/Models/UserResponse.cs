@@ -29,7 +29,7 @@ namespace App.Models
         public string RequestDetails {get; set;}
 
         [Required]
-        public string Duration {get; set;}
+        public int Duration {get; set;}
         
     }
 }

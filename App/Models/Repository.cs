@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace App.Models
 {
-    public class Repository
+    public static class Repository
     {
         
     }
