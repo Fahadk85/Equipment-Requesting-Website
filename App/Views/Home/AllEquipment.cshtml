@@ -1,0 +1,26 @@
+@model IEnumerable<Equipment> 
+
+<h2>All Equipment Listing</h2>
+
+<link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+
+<table class="table table-bordered table-striped table-sm">
+ <thead>
+<tr><th>EquipmentID</th><th>Type</th><th>Description</th><th>Availability</th></tr>
+</thead>
+<tbody>
+    @foreach (Equipment equipment in Model){
+        <tr>
+            <td>@equipment.EquipmentId</td>
+            <td>@equipment.Type</td>
+            <td>@equipment.Description</td>
+            <td>@equipment.IsAvailable</td>
+        </tr>
+    }
+</tbody>
+</table>
+
+</div>
+
+
+
